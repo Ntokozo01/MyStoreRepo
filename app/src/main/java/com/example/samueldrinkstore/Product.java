@@ -5,9 +5,9 @@ package com.example.samueldrinkstore;
  */
 public class Product {
     private int id;
+    private  String barcode;
     private String productCode;
     private String productDescription;
-    private int size;
     private double price;
     private String category;
 
@@ -15,11 +15,11 @@ public class Product {
 
     }
 
-    public Product(int id, String productCode, String productDescription, int size, double price, String category) {
+    public Product(int id, String barcode, String productCode, String productDescription, double price, String category) {
         this.id = id;
+        this.barcode = barcode;
         this.productCode = productCode;
         this.productDescription = productDescription;
-        this.size = size;
         this.price = price;
         this.category = category;
     }
@@ -48,14 +48,6 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -76,11 +68,19 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id=" + id +
+                ", barcode='" + barcode + '\'' +
                 ", productCode='" + productCode + '\'' +
                 ", productDescription='" + productDescription + '\'' +
-                ", size=" + size +
                 ", price=" + price +
                 ", category='" + category + '\'' +
                 '}';
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 }

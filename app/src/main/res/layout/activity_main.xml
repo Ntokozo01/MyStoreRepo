@@ -6,6 +6,141 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBarcode"
+        android:text="Barcode:"
+        android:layout_weight="0"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="20dp"
+       />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtBarcode"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnScan"
+            android:text="SCAN"
+            android:layout_marginHorizontal="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtProductCode"
+            android:text="Product Code:"
+            android:layout_weight="0"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtProductCode"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtProductDescription"
+            android:text="Product Description:"
+            android:layout_weight="0"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtProductDescription"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPrice"
+            android:text="Selling Price:"
+            android:layout_weight="0"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtPrice"
+            android:inputType="numberDecimal"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCategory"
+            android:text="Product Category:"
+            android:layout_weight="0"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtCategory"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:hint="" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAdd"
+        android:text="Add Product"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +160,8 @@
             android:layout_height="wrap_content"
             android:text="Hide View"
             android:layout_marginHorizontal="20dp"/>
-
     </LinearLayout>
+
 
     <ListView
         android:id="@+id/listView"

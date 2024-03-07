@@ -26,9 +26,9 @@ public class DatabaseHandler {
 
     public void addProduct(Product product){
         ContentValues values = new ContentValues();
+        values.put("barcode",product.getBarcode());
         values.put("productCode", product.getProductCode());
         values.put("productDescription", product.getProductDescription());
-        values.put("size", product.getSize());
         values.put("price", product.getPrice());
         values.put("category", product.getCategory());
         db.insert("products",null,values);
@@ -42,9 +42,9 @@ public class DatabaseHandler {
             do {
                 Product product = new Product();
                 product.setId(cursor.getInt(0));
-                product.setProductCode(cursor.getString(1));
-                product.setProductDescription(cursor.getString(2));
-                product.setSize(cursor.getInt(3));
+                product.setBarcode(cursor.getString(1));
+                product.setProductCode(cursor.getString(2));
+                product.setProductDescription(cursor.getString(3));
                 product.setPrice(cursor.getDouble(4));
                 product.setCategory(cursor.getString(5));
                 lst_products.add(product);

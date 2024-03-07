@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
     private  static final String DATABASE_NAME = "productscatalogue.db";
-    private  static final int DATABASE_VERSION = 1;
+    private  static final int DATABASE_VERSION = 3;
 
     public DBHelper(Context context){
         super(context,DATABASE_NAME, null, DATABASE_VERSION);
@@ -16,9 +16,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db){
         String createTable = "CREATE TABLE products (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "productCode TEXT,"+
+                "barcode TEXT UNIQUE DEFAULT 'Unknown',"+
+                "productCode TEXT UNIQUE,"+
                 "productdescription TEXT," +
-                "size INTEGER," +
                 "price REAL," +
                 "category TEXT)";
         db.execSQL((createTable));
