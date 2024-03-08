@@ -11,6 +11,31 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeader"
+            android:text="Products Search:"
+            android:textColor="@color/purple_700"
+            android:layout_weight="0"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:text="Add Product"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -90,63 +115,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtPrice"
-            android:text="Selling Price:"
-            android:layout_weight="0"
-            android:textSize="20sp"
-            android:layout_marginHorizontal="20dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edtPrice"
-            android:inputType="numberDecimal"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="20dp"
-            android:hint="" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtCategory"
-            android:text="Product Category:"
-            android:layout_weight="0"
-            android:textSize="20sp"
-            android:layout_marginHorizontal="20dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edtCategory"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="20dp"
-            android:hint="" />
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAdd"
-        android:text="Add Product"
-        android:layout_gravity="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
         <Button
             android:id="@+id/showView"
             android:layout_width="wrap_content"
@@ -171,4 +139,5 @@
         android:divider="@color/black"
         android:dividerHeight="2dp"
         android:listSelector="@color/purple_200" />
+
 </LinearLayout>
